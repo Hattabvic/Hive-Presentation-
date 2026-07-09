@@ -1,17 +1,43 @@
-import { usePresentation } from './hooks/usePresentation.js';
-import { SLIDES } from './data/slides.js';
-import Chrome from './components/Chrome.jsx';
-import Guide from './components/Guide.jsx';
+import { usePresentation } from "./hooks/usePresentation.js";
+import { SLIDES } from "./data/slides.js";
+import Chrome from "./components/Chrome.jsx";
+import Guide from "./components/Guide.jsx";
 
 import {
-  Cover, Index, RetentionHook, Problem, Solution, Product,
-  Audience, Cost, Market, Viability, Why, Roadmap,
-  EduChapters, EduCallouts,
-} from './slides/SlidesA.jsx';
-import { Break, Kit, Arch, Dionaea, Provisioning, HwEnterprise } from './slides/SlidesB.jsx';
-import { OsEcosystem, CowrieMaze } from './slides/Architecture.jsx';
-import { SiemB1, SiemB2, SiemF1, SiemF2 } from './slides/SiemSlides.jsx';
-import { Designs, Lp1, Lp2, Books2, Books3, Team, Thanks } from './slides/SlidesC.jsx';
+  Cover,
+  Index,
+  RetentionHook,
+  Problem,
+  Solution,
+  Product,
+  Audience,
+  Cost,
+  Market,
+  Viability,
+  Why,
+  Roadmap,
+  EduChapters,
+  EduCallouts,
+} from "./slides/SlidesA.jsx";
+import {
+  Break,
+  Kit,
+  Arch,
+  Dionaea,
+  Provisioning,
+  HwEnterprise,
+} from "./slides/SlidesB.jsx";
+import { OsEcosystem, CowrieMaze } from "./slides/Architecture.jsx";
+import { SiemB1, SiemB2, SiemF1, SiemF2 } from "./slides/SiemSlides.jsx";
+import {
+  Designs,
+  Lp1,
+  Lp2,
+  Books2,
+  Books3,
+  Team,
+  Thanks,
+} from "./slides/SlidesC.jsx";
 
 export default function App() {
   const { activeIndex, progress, showHint, goTo } = usePresentation();
@@ -24,20 +50,25 @@ export default function App() {
 
   return (
     <>
-      <Chrome activeIndex={activeIndex} progress={progress} showHint={showHint} goTo={goTo} />
+      <Chrome
+        activeIndex={activeIndex}
+        progress={progress}
+        showHint={showHint}
+        goTo={goTo}
+      />
 
       <main>
         <Cover />
         <Index goToId={goToId} />
-        <RetentionHook active={is('hook-retention')} />
+        <RetentionHook active={is("hook-retention")} />
         <Problem />
         <Solution />
         <Product />
         <Audience />
-        <Cost active={is('cost')} />
         <Market />
         <Viability />
         <Why />
+        <Cost active={is("cost")} />
         <Roadmap />
         <EduChapters />
         <EduCallouts />
@@ -53,7 +84,7 @@ export default function App() {
         <HwEnterprise />
         <SiemB1 />
         <SiemB2 />
-        <SiemF1 active={is('siem-f1')} />
+        <SiemF1 active={is("siem-f1")} />
         <SiemF2 />
         <Designs />
         <Lp1 />
