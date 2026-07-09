@@ -656,111 +656,7 @@ export function Audience() {
   );
 }
 
-/* ─────────────────────────── 07b · COST STRUCTURE ─────────────────────────── */
-const COST_ROWS = [
-  { d: ".18s", label: "Hardware", value: 31715 },
-  { d: ".28s", label: "Software & Tools", value: 0 },
-  { d: ".38s", label: "Operations", value: 2850 },
-];
-export function Cost({ active }) {
-  return (
-    <Slide id="cost" className="wide ctr">
-      <div className="eyebrow r fade">Cost Structure</div>
-      <h2 className="ttl r" style={{ "--d": ".07s", margin: "14px 0 30px" }}>
-        Total <span className="ac">project cost</span>.
-      </h2>
-      <div
-        style={{
-          display: "flex",
-          flexDirection: "column",
-          gap: 16,
-          width: "100%",
-          maxWidth: 880,
-          margin: "0 auto",
-        }}
-      >
-        {COST_ROWS.map((r) => (
-          <div
-            key={r.label}
-            className="r"
-            style={{
-              "--d": r.d,
-              display: "flex",
-              alignItems: "center",
-              justifyContent: "space-between",
-              background: "var(--bg2)",
-              border: "1px solid var(--border)",
-              borderRadius: 14,
-              padding: "20px 30px",
-            }}
-          >
-            <span
-              style={{
-                fontFamily: "var(--fd)",
-                fontWeight: 700,
-                fontSize: "clamp(20px,2vw,28px)",
-                color: "var(--ink)",
-              }}
-            >
-              {r.label}
-            </span>
-            <span
-              style={{
-                fontFamily: "var(--fm)",
-                fontWeight: 700,
-                fontSize: "clamp(28px,2.8vw,42px)",
-                color: "var(--ink)",
-                lineHeight: 1,
-              }}
-            >
-              <CountUp target={r.value} sep active={active} />{" "}
-              <span style={{ fontSize: ".5em", color: "var(--ink3)" }}>
-                EGP
-              </span>
-            </span>
-          </div>
-        ))}
-        <div
-          className="r"
-          style={{
-            "--d": ".5s",
-            display: "flex",
-            alignItems: "center",
-            justifyContent: "space-between",
-            background: "var(--navy)",
-            borderTop: "4px solid var(--cyan)",
-            borderRadius: 14,
-            padding: "24px 30px",
-            boxShadow: "0 0 25px var(--cyanglow)",
-          }}
-        >
-          <span
-            style={{
-              fontFamily: "var(--fd)",
-              fontWeight: 800,
-              fontSize: "clamp(22px,2.2vw,32px)",
-              color: "#F0F4F8",
-            }}
-          >
-            Total per unit
-          </span>
-          <span
-            style={{
-              fontFamily: "var(--fm)",
-              fontWeight: 800,
-              fontSize: "clamp(34px,3.4vw,54px)",
-              color: "var(--cyan)",
-              lineHeight: 1,
-            }}
-          >
-            <CountUp target={34565} sep active={active} />{" "}
-            <span style={{ fontSize: ".5em", color: "#8BAEC4" }}>EGP</span>
-          </span>
-        </div>
-      </div>
-    </Slide>
-  );
-}
+
 
 /* ─────────────────────────── 08 · MARKET ─────────────────────────── */
 const FUNNEL = [
@@ -1293,6 +1189,112 @@ export function Why() {
               </div>
             ))}
           </div>
+        </div>
+      </div>
+    </Slide>
+  );
+}
+
+/* ─────────────────────────── 07b · COST STRUCTURE ─────────────────────────── */
+const COST_ROWS = [
+  { d: ".18s", label: "Hardware", value: 31715 },
+  { d: ".28s", label: "Software & Tools", value: 0 },
+  { d: ".38s", label: "Operations", value: 2850 },
+];
+export function Cost({ active }) {
+  return (
+    <Slide id="cost" className="wide ctr">
+      <div className="eyebrow r fade">Cost Structure</div>
+      <h2 className="ttl r" style={{ "--d": ".07s", margin: "14px 0 30px" }}>
+        Total <span className="ac">project cost</span>.
+      </h2>
+      <div
+        style={{
+          display: "flex",
+          flexDirection: "column",
+          gap: 16,
+          width: "100%",
+          maxWidth: 880,
+          margin: "0 auto",
+        }}
+      >
+        {COST_ROWS.map((r) => (
+          <div
+            key={r.label}
+            className="r"
+            style={{
+              "--d": r.d,
+              display: "flex",
+              alignItems: "center",
+              justifyContent: "space-between",
+              background: "var(--bg2)",
+              border: "1px solid var(--border)",
+              borderRadius: 14,
+              padding: "20px 30px",
+            }}
+          >
+            <span
+              style={{
+                fontFamily: "var(--fd)",
+                fontWeight: 700,
+                fontSize: "clamp(20px,2vw,28px)",
+                color: "var(--ink)",
+              }}
+            >
+              {r.label}
+            </span>
+            <span
+              style={{
+                fontFamily: "var(--fm)",
+                fontWeight: 700,
+                fontSize: "clamp(28px,2.8vw,42px)",
+                color: "var(--ink)",
+                lineHeight: 1,
+              }}
+            >
+              <CountUp target={r.value} sep active={active} />{" "}
+              <span style={{ fontSize: ".5em", color: "var(--ink3)" }}>
+                EGP
+              </span>
+            </span>
+          </div>
+        ))}
+        <div
+          className="r"
+          style={{
+            "--d": ".5s",
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "space-between",
+            background: "var(--navy)",
+            borderTop: "4px solid var(--cyan)",
+            borderRadius: 14,
+            padding: "24px 30px",
+            boxShadow: "0 0 25px var(--cyanglow)",
+          }}
+        >
+          <span
+            style={{
+              fontFamily: "var(--fd)",
+              fontWeight: 800,
+              fontSize: "clamp(22px,2.2vw,32px)",
+              color: "#F0F4F8",
+            }}
+          >
+            Total per unit
+          </span>
+          <span
+            style={{
+              fontFamily: "var(--fm)",
+              fontWeight: 800,
+              fontSize: "clamp(34px,3.4vw,54px)",
+              color: "var(--cyan)",
+              lineHeight: 1,
+            }}
+          >
+            <CountUp target={34565} sep active={active} />{" "}
+            <span style={{ fontSize: ".5em", color: "#8BAEC4" }}>EGP</span>
+          </span>
         </div>
       </div>
     </Slide>
