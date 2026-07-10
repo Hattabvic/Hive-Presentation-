@@ -30,8 +30,8 @@ export const PRODUCTS = [
 // 11 · Roadmap
 export const ROADMAP = [
   { phase: 'Now', title: 'Working kit', desc: 'Full curriculum + complete working hardware kit.', lit: true },
-  { phase: 'Next', title: 'RPi 5 + protocols', desc: 'Upgrade to RPi 5; add RDP, VNC and MySQL traps.', lit: false },
-  { phase: 'Then', title: 'Batch production', desc: 'Manufacture at scale and run school pilots.', lit: false, half: true },
+  { phase: 'Next', title: 'Batch production', desc: 'Manufacture at scale and run school pilots', lit: false },
+  { phase: 'Then', title: 'Content Upgrade', desc: 'Add more Labs describe different scenarios.', lit: false, half: true },
 ];
 
 // 10 · Why HIVE Wins — comparison rows. cloud / vm / hive cells: '✓' (yes) or '✗' (no)
