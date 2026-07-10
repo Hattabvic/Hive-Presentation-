@@ -656,8 +656,6 @@ export function Audience() {
   );
 }
 
-
-
 /* ─────────────────────────── 08 · MARKET ─────────────────────────── */
 const FUNNEL = [
   {
@@ -868,19 +866,6 @@ const VIABILITY = [
       </>
     ),
   },
-  {
-    d: ".4s",
-    delay: "1.2s",
-    tag: "Cost vs. Market",
-    line: "Commodity hardware keeps costs low vs. imported training kits — priced within institutional budgets.",
-    icon: (
-      <>
-        <path d="M12 3v18M7 21h10" />
-        <path d="M7 7 3 13a4 4 0 0 0 8 0L7 7ZM17 7l-4 6a4 4 0 0 0 8 0l-4-6Z" />
-        <path d="M7 7h10" />
-      </>
-    ),
-  },
 ];
 export function Viability() {
   return (
@@ -892,9 +877,12 @@ export function Viability() {
       <div
         style={{
           display: "grid",
-          gridTemplateColumns: "repeat(3,1fr)",
+          gridTemplateColumns: "repeat(auto-fit, minmax(300px, 1fr))",
+          justifyContent: "center",
           gap: 22,
           width: "100%",
+          maxWidth: 920,
+          margin: "0 auto",
         }}
       >
         {VIABILITY.map((v) => (
@@ -1458,8 +1446,8 @@ export function EduCallouts() {
         One page. Four <span className="ac">signals</span>.
       </h2>
       <p className="lead r" style={{ "--d": ".14s", marginBottom: 26 }}>
-        Every lab in both books repeats the same four callout boxes so
-        students always know what kind of information they&rsquo;re reading.
+        Every lab in both books repeats the same four callout boxes so students
+        always know what kind of information they&rsquo;re reading.
       </p>
       <div style={{ display: "flex", flexDirection: "column", gap: 14 }}>
         {CALLOUTS.map((cta, i) => (
